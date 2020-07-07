@@ -11,12 +11,23 @@ vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo 
 aparecer na tela.
 
 <body>
-        
-       
-    
+    <button id="new">Novo quadrado</button>
+
+    <div id="squares"></div>
+  
     <script>
-      
-        
-    </script> 
+      var btnElement = document.getElementById('new');
+      var squaresElement = document.getElementById('squares');
+  
+      btnElement.onclick = function () {
+        var square = document.createElement('div');
+  
+        square.style.width = '100px';
+        square.style.height = '100px';
+        square.style.backgroundColor = '#F00';
+  
+        squaresElement.appendChild(square);
+      };
+    </script>
 </body>
 </html>
